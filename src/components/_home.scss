@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap");
+
+.home {
+  max-width: 100%;
+  width: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(1.3px);
+  z-index: 5;
+}
+
+.home__header {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home__logo-block {
+  max-width: 180px;
+  img {
+    width: 100%;
+  }
+}
+
+.home__logo {
+  font-size: 45px;
+  font-family: "Syne", sans-serif;
+  text-decoration: none;
+  color: #377d6a;
+  transition-duration: 0.3s;
+  letter-spacing: 1.2px;
+  &:hover {
+    font-size: 45.5px;
+    letter-spacing: 0.8px;
+    margin-left: -1px;
+  }
+}
+
+.inputs__box {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.input__block {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.has-child-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  .has-child {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    position: relative;
+    div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      label {
+        padding: 4px 8px;
+        text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+        background: #334b3c;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        text-align: center;
+        border: 1px solid #629577;
+        box-shadow: -2px 0 5px 1px #62957748;
+        color: #fff;
+        margin-left: 0px;
+        flex-shrink: 0;
+      }
+      input {
+        flex-shrink: 0;
+        margin-right: 0px;
+      }
+    }
+  }
+}
+.has-child-div {
+  width: 105px;
+  padding: 10px 2px;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  background: #7ab893;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  text-align: center;
+  border: 1px solid #629577;
+  box-shadow: -2px 0 5px 1px #62957748;
+}
+
+.child-input1:checked ~ .hidden-inputs {
+  display: block;
+  div {
+    display: flex;
+    align-items: flex-start;
+    input {
+      display: block;
+    }
+    button {
+      display: block;
+      flex-shrink: 0;
+    }
+    label {
+      display: block;
+    }
+  }
+}
+.hidden-inputs {
+  display: none;
+  position: absolute;
+  bottom: -100px;
+  left: -300px;
+  display: flex;
+  align-items: flex-start;
+  div {
+    display: none;
+    label {
+      display: none;
+    }
+    input {
+      display: none;
+    }
+    button {
+      display: none;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.inputs-block-area {
+  input {
+    padding: 3px 4px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+  }
+}
+
+.saved-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: 80vh;
+  button {
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    font-size: 17.5px;
+    padding: 10px 22px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 4px;
+    transition-duration: 0.3s;
+    box-shadow: 0 0 8px 2px #5555554c;
+    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-2px);
+      transform: scale(1.09);
+    }
+    &:active {
+      transform: translateY(3px);
+    }
+  }
+  .download-btn {
+    background-color: #5856d6;
+    padding: 8.5px 22px;
+  }
+  .edit-btn {
+    background-color: #ffcc00;
+  }
+  .new-user-btn {
+    background-color: #4cd964;
+  }
+}
+
+.btns-block {
+  width: 100%;
+  position: relative;
+  button {
+    position: absolute;
+    right: 80px;
+    padding: 8px 18px;
+    border-radius: 3px;
+    border: none;
+    background-color: green;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    font-size: 17.5px;
+    transition-duration: 0.3s;
+    margin-right: 50px;
+    &:hover {
+      background-color: #04a704;
+      cursor: pointer;
+      transform: translateY(-2px);
+      transform: scale(1.06);
+    }
+  }
+}
+
+.swing {
+  display: inline-block;
+  width: 500px;
+  padding: 10px 0 10px 15px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: #377d6a;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 60px; // Arbitrary.
+  transition: all 0.3s ease-in-out;
+  padding-left: 50px;
+
+  &::-webkit-input-placeholder {
+    color: #efefef;
+    text-indent: 0;
+    font-weight: 300;
+  }
+
+  + div {
+    font-size: 13px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105px;
+    padding: 10px 2px;
+    text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+    background: #7ab893;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    text-align: center;
+    transform-origin: 2px 2px;
+    transform: rotate(0);
+    border: 1px solid #629577;
+    box-shadow: -2px 0 5px 1px #62957748;
+    animation: swing-back 0.4s 1 ease-in-out;
+  }
+}
+@keyframes swing {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(116deg);
+  }
+  40% {
+    transform: rotate(60deg);
+  }
+  60% {
+    transform: rotate(98deg);
+  }
+  80% {
+    transform: rotate(76deg);
+  }
+  100% {
+    transform: rotate(82deg);
+  }
+}
+@keyframes swing-back {
+  0% {
+    transform: rotate(82deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.swing:focus,
+.swing:active {
+  color: #377d6a;
+  text-indent: 0;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  &::-webkit-input-placeholder {
+    color: #aaa;
+  }
+  + div {
+    animation: swing 1.4s 1 ease-in-out;
+    transform: rotate(82deg);
+  }
+}
+
+.child-red {
+  background-color: #7b2727 !important;
+}
+
+.child-green {
+  background-color: green !important;
+}
+
+@media screen and (max-width: 1080px) {
+  .swing {
+    width: 380px;
+    padding: 7px 0 7px 50px;
+    +div {
+      padding: 7px 2px;
+    }
+  }
+  .has-child-block {
+    width: 380px;
+  }
+  .has-child-div {
+    padding: 7px 2px;
+  }
+}
